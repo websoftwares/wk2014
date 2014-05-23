@@ -4,6 +4,7 @@ wk2014
 Wk2014 is a handy package for retrieving world cup data from the football.db database.
 
 [![Build Status](https://api.travis-ci.org/websoftwares/wk2014.png)](https://travis-ci.org/websoftwares/wk2014)
+[![Coverage Status](https://img.shields.io/coveralls/websoftwares/wk2014.svg)](https://coveralls.io/r/websoftwares/wk2014?branch=master)
 
 ## Installing via Composer (recommended)
 
