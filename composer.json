@@ -1,0 +1,59 @@
+{
+    "name" : "websoftwares/Wk2014",
+    "description" : "Websoftwares Wk2014 is a handy package for retrieving world cup data from the football.db database.",
+    "keywords" : [
+        "Wk",
+        "Wk 2014",
+        "Wereld beker",
+        "Voetbal",
+        "Soccer",
+        "Word Cup",
+        "football.db"
+    ],
+    "license" : "MIT",
+    "authors" : [
+        {
+            "name": "Boris Verhaaff",
+            "email": "boris@websoftwar.es",
+            "role" : "Developer"
+        }
+    ],
+    "require" : {
+        "php": ">=5.4.0",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "psr/log": "~1.0",
+        "openfootball/build" : "v2014.04.26"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "openfootball/build",
+                "version": "v2014.04.26",
+                "dist": {
+                    "url": "https://github.com/openfootball/build/releases/download/v2014.04.26/worldcup2014.db",
+                    "type": "file"
+                }
+            }
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.1.0",
+        "monolog/monolog": "dev-master",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Websoftwares\\Wk2014\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Websoftwares\\Tests\\Wk2014\\": "tests/"
+        }
+    },
+    "suggest": {
+        "monolog/monolog": "Excellent PHP 5.3+ PSR-3 compatible logging library."
+    }
+}
