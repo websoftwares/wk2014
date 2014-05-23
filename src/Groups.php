@@ -26,8 +26,8 @@ class Groups extends Base
     }
 
     /**
-     * getGroup retrieve group teams from database
-     * @param int $id
+     * getGroup retrieve a list of teams in the group from the database
+     * @param  int   $id
      * @return array
      */
     public function getGroup($id = null)

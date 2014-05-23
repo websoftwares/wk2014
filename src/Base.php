@@ -43,6 +43,7 @@ class Base
         $languageClass = '\\Websoftwares\\Wk2014\\Language\\' . strtoupper($language);
         if (class_exists($languageClass)) {
             $translation = (new $languageClass)->getTranslations();
+
             return array_key_exists($column, $translation) ? $translation[$column] : [] ;
         } else {
             return [];

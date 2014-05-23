@@ -18,6 +18,7 @@ class Db
     {
         $db = new \PDO('sqlite:' . __DIR__ . '/../vendor/openfootball/build/worldcup2014.db');
         $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
         return $db;
     }
 }

@@ -28,14 +28,14 @@ class Teams extends Base
     /**
      * getTeamMatches retrieve matches for team by fifa country code
      * @see http://en.wikipedia.org/wiki/List_of_FIFA_country_codes
-     * @param string $id i.e "NED", "GER"
+     * @param  string $id i.e "NED", "GER"
      * @return array
      */
     public function getTeamMatches($code = null)
     {
         $teamMatches = [];
 
-        if (! $code ) {
+        if (! $code) {
             throw new \InvalidArgumentException("The FIFA country code must be set.");
         }
 
@@ -57,7 +57,7 @@ class Teams extends Base
                 AND strftime('%Y-%m-%d',ga.play_at) BETWEEN '2014-06-12' AND '2014-07-14'");
             $sth->execute([':event' => "world.2014", ":code" => $code]);
 
-            while($row = $sth->fetch(\PDO::FETCH_ASSOC)) {
+            while ($row = $sth->fetch(\PDO::FETCH_ASSOC)) {
                 $teamMatches[$row['pos']] = [
                     'play_at' => $row['play_at'],
                     $row['t1_code'] => $row['t1_title'],
