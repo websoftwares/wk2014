@@ -61,6 +61,9 @@ $group = (new Groups($logger), "NL")->getGroups(2);
 Teams contending at the FIFA Worldcup 2014 Brazil in the following language(s)
 - NL
 
+## Todo
+Add more methods for the dataset, pherhaps extend the events not just world cup.
+
 ## Logger
 Any logger library that implements the [PSR-3](https://github.com/php-fig/log) _LoggerInterface_ should work,
 just create your Logger object and inject it into the `Wk2014 Classes` constructors.
